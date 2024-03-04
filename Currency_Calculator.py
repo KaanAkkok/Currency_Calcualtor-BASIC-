@@ -33,6 +33,8 @@ def calculate_it():
             rate = 1 / EUR_to_TRY
         elif(currencies_combo1.get() == 'TRY' and currencies_combo2.get() == 'USD'):
             rate = 1 / USD_to_TRY
+        else:
+            messagebox.showerror("Error", "Please select a currency.")
         calculated_value = amount * rate
         calculated_entry.insert(0, f"{calculated_value:.2f}") 
     except KeyError:
